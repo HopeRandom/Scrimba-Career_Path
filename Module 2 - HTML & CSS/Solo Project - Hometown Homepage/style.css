@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: "Moulpali", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+p {
+    line-height: 20px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+.italic {
+    font-style: italic;
+    padding-left: 20px;
+}
+
+.hero {
+    background-image: url("images/Plymouth\ Background.jpg");
+    background-size: cover;
+    height: 350px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-header {
+    background: #1D3557;
+    width: 225px;
+    font-size: 32px;
+    padding: 4px 13px;
+    margin: 0 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#hero-text {
+    background: #457B9D;
+    width: 400px;
+    font-size: 18px;
+    padding: 4px 13px;
+    border: none;
+    border-radius: 10px;
+    line-height: 25px;
+}
+
+.activities {
+    background-color: #F1FAEE;
+    font-size: 24px;
+    height: 425px;
+}
+
+
+.activities-container {
+    background-color: #F1FAEE;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+
+.activities-img {
+    border: none;
+    border-radius: 50%;
+    margin: 0;
+}
+
+#aquarium, #smeatons-tower, #the-box  {
+    width: 200px;
+}
+
+.guide {
+    width: 400px;
+    background-color: #A8DADC;
+    border-bottom: 6px solid #1D3557;
+    border-radius: 10px;
+    margin: 75px auto 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#profile-picture {
+    border-radius: 10px;
+    width: 180px;
+    height: 220px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
