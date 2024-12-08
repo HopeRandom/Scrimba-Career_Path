@@ -1,6 +1,6 @@
 let player = {
     name: "Eliza", 
-    chips: 200
+    chips: 100
 };
 
 const messageEl = document.getElementById('message-el');
@@ -12,20 +12,29 @@ playerEl.textContent = `${player.name} : $${player.chips}`;
 
 let cards = [];
 let sum = 0;
+let message = "";
 
 let hasBlackJack = false;
 let isAlive = false;
-let message = "";
+let hasChips = true;
 
 function startGame() {
-    isAlive = true
-    hasBlackJack = false
 
-    const firstCard = getRandomCard()
-    const secondCard = getRandomCard()
-    cards = [firstCard, secondCard]
-    sum = firstCard + secondCard
-    renderGame()
+    if (player.chips === 0) {
+        isAlive = false
+        gameOver()
+    } else {
+        isAlive = true
+        hasBlackJack = false
+    
+        const firstCard = getRandomCard()
+        const secondCard = getRandomCard()
+        cards = [firstCard, secondCard]
+        sum = firstCard + secondCard
+
+        renderGame()
+    };
+
 };
 
 function renderGame() {
@@ -36,25 +45,27 @@ function renderGame() {
     };
 
     sumEl.textContent = `Sum: ${sum}`
+
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
         message = "You've got Blackjack!"
         hasBlackJack = true
+        increaseChips()
     } else {
         message = "You're out of the game!"
         isAlive = false
     };
-
     messageEl.textContent = message
 };
 
 function newCard() {
-    if (isAlive && hasBlackJack === false) {
+    if (isAlive && hasChips && hasBlackJack === false) {
         const card = getRandomCard()
         sum += card
         cards.push(card)
         renderGame()
+        decreaseChips()
     };
 };
 
@@ -69,3 +80,26 @@ function getRandomCard() {
         return randomNumber
     };
 };
+
+
+function increaseChips() {
+    if (hasBlackJack) {
+        player.chips += 10
+        playerEl.textContent = `${player.name} : $${player.chips}`
+    };
+}
+
+function decreaseChips() {
+    if (isAlive === false) {
+        player.chips -= 5
+        playerEl.textContent = `${player.name} : $${player.chips}`
+    };
+};
+
+function gameOver() {
+    if (player.chips === 0) {
+        playerEl.textContent = `${player.name}: $0`
+        message = "ADD CHIPS TO PLAY"
+        messageEl.textContent = message
+    }
+}
