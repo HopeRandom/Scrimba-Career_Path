@@ -43,9 +43,38 @@ hr {
     color: #4ADF86;
 }
 
+.btn-container {
+    margin-top: 50px;
+    display: flex;
+    width: 450px;
+    justify-content: flex-start;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    color: #fff;
+    font-size: 0.75rem;
+
+}
+
+.length-input {
+    width: 55px;
+    height: 35px;    
+    text-align: center;
+    margin-right: 40px;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: none;
+    background-color: #D5D4D8;
+}
 
 .generate-btn {
-    margin-top: 50px;
     color: #fff;
     background-color: #10B981;
     font-weight: 300;
@@ -53,6 +82,11 @@ hr {
     border-radius: 6px;
     padding: 10px 15px;
     font-family: "Inter", sans-serif;
+}
+
+.generate-btn:hover {
+    color: #1F2937;
+    font-weight: 400;
 }
 
 .output-box {
