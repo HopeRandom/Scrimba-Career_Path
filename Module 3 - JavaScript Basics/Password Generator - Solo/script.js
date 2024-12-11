@@ -4,14 +4,16 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 const generateBtn = document.querySelector('.generate-btn');
 const passwordOne = document.getElementById("passwordOne");
 const passwordTwo = document.getElementById("passwordTwo");
-let lengthInput = document.getElementById('length-input');
+const lengthInput = document.getElementById('length-input');
 // let passwordLength = 15;
 
 
-generateBtn.addEventListener('click', function() {
+generateBtn.addEventListener('click', () => {
+    
     passwordLength = lengthInput.value;
     passwordOne.textContent = createPassword();
     passwordTwo.textContent = createPassword();
+
 });
 
 function getRandomCharacter() {
@@ -20,10 +22,22 @@ function getRandomCharacter() {
 };
 
 function createPassword() {
-    let password = ""
+    let password = "";
     for (let i = 0; i < passwordLength; i++) {
         password += getRandomCharacter()
     }
-    return password
+    return password;
 };
 
+
+// Copy-on-click functions 
+
+passwordOne.addEventListener('click', async (e) => {
+    const content = passwordOne.textContent;
+    await navigator.clipboard.writeText(content);
+});
+
+passwordTwo.addEventListener('click', async (e) => {
+    const content = passwordTwo.textContent;
+    await navigator.clipboard.writeText(content);
+});

@@ -2,17 +2,17 @@ body {
     margin: 0;
     height: 100%;
     overflow: hidden;
+    background-color: #1F2937;
 }
 
 hr {
-    width: 450px;
+    width: 510px;
     margin: 35px 0;
     border: 1px #273549 solid;
 }
 
 .container {
-    padding: 20px 20px;
-    background-color: #1F2937;
+    padding: 0 20px;
     width: 100vw;
     height: 100vh;
 }
@@ -36,7 +36,7 @@ hr {
     font-weight: 200;
     color: #D5D4D8;
     margin-top: 10px;
-    font-size: 1.75rem;
+    font-size: 1rem;
 }
 
 .heading span {
@@ -58,7 +58,6 @@ hr {
     font-weight: 200;
     color: #fff;
     font-size: 0.75rem;
-
 }
 
 .length-input {
@@ -87,6 +86,7 @@ hr {
 .generate-btn:hover {
     color: #1F2937;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .output-box {
@@ -103,5 +103,24 @@ hr {
     padding: 5px 15px;
     text-align: center;
     align-content: center;
+    overflow: auto;
 }
+
+p {
+    font-family: 'Karla', sans-serif;
+    font-size: 0.75rem;
+    margin-left: 180px;
+    color: #4ADF86;
+    font-weight: 500;
+}
+
+.output-box:hover {
+    cursor: pointer;
+}
+
+.output-box:active {
+    cursor: pointer;
+    border: dotted 2px #55F991;
+}
+
 
