@@ -1,5 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    padding: 0;
     height: 100%;
     overflow: hidden;
     background-color: #1F2937;
@@ -7,7 +12,7 @@ body {
 
 hr {
     width: 510px;
-    margin: 35px 0;
+    margin: 25px 0;
     border: 1px #273549 solid;
 }
 
@@ -18,7 +23,7 @@ hr {
 }
 
 .container-text {
-    margin: 60px;
+    margin: 20px 60px;
 }
 
 .heading {
@@ -44,10 +49,11 @@ hr {
 }
 
 .btn-container {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     width: 450px;
     justify-content: flex-start;
+    margin-bottom: 15px;
 }
 
 .label-input {
@@ -123,4 +129,19 @@ p {
     border: dotted 2px #55F991;
 }
 
+.checkboxes label {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 0.75rem;
+    color: #fff;
+}
 
+.checkboxes input {
+    margin-right: 20px;
+    height: 10px;
+    width: 10px;
+}
+
+.checkboxes input:hover {
+    cursor: pointer;
+}
