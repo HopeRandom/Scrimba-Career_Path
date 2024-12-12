@@ -1,139 +1,169 @@
+:root {
+
+    --mint: #10B981;
+    --spring-green: #55F991;
+    --background: #1F2937; /* Gunmetal */
+    --accent-dark: #273549; /* Prussian blue */
+    --accent-light: #D5D4D8; /* Timberwolf */
+    --text: #fff;
+
+    --base-font: "Inter", sans-serif;
+    --heading-font: "Karla", sans-serif;
+}
+
+.light-mode {
+    --background: #ECFDF5; /* Honeydew */
+    --accent-light: #6B7280; /* Slate Grey */
+    --text: #2B283A;
+    --spring-green: #10B981;
+}
+
+.light-mode #theme-switch svg:first-child {
+    display: none;
+}
+
+.light-mode #theme-switch svg:last-child {
+    display: block;
+}
+
+/* Toggle dark/light mode */
+
+#theme-switch {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--accent-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-switch svg {
+    fill: var(--accent-dark);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
 }
 
-body {
+
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: hidden;
-    background-color: #1F2937;
+    background-color: var(--background);
 }
+
+
+/* Utility Classes */
 
 hr {
-    width: 510px;
+    width: 460px;
     margin: 25px 0;
-    border: 1px #273549 solid;
+    border: 1px solid var(--accent-dark);
 }
 
+/* Font Classes */
+
+.base-font {
+    font-family: var(--base-font);
+    font-weight: 400;
+    color: var(--text);
+}
+
+/* Hero */
+
 .container {
+    margin: 30px 60px;
     padding: 0 20px;
     width: 100vw;
     height: 100vh;
 }
 
-.container-text {
-    margin: 20px 60px;
-}
-
 .heading {
     display: flex;
     flex-direction: column;
-    color: #fff;
-    font-weight: 800;
     margin: 0;
-    font-family: 'Karla', sans-serif;
-    font-size: 2.5rem;
-}
 
-.subheading {
-    font-family: "Inter", sans-serif;
-    font-weight: 200;
-    color: #D5D4D8;
-    margin-top: 10px;
-    font-size: 1rem;
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--text);
 }
 
 .heading span {
-    color: #4ADF86;
+    color: var(--spring-green)
 }
 
+.subheading {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+
+    color: var(--accent-light);
+}
+
+/* Buttons & Checkboxes */
+
 .btn-container {
-    margin-top: 40px;
     display: flex;
-    width: 450px;
     justify-content: flex-start;
+    width: 450px;
+    margin-top: 40px;
     margin-bottom: 15px;
+}
+
+.generate-btn {
+    background-color: var(--mint);
+    padding: 10px 15px;
+    font-weight: 400;
+
+    border: none;
+    border-radius: 6px;
+}
+
+.generate-btn:hover {
+    color: var(--accent-dark);
+    cursor: pointer;
 }
 
 .label-input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Inter", sans-serif;
-    font-weight: 200;
-    color: #fff;
+
     font-size: 0.75rem;
 }
 
 .length-input {
     width: 55px;
     height: 35px;    
+    margin: 0 40px 0 10px;
     text-align: center;
-    margin-right: 40px;
-    margin-left: 10px;
     justify-content: center;
     align-items: center;
+
     border-radius: 6px;
     border: none;
-    background-color: #D5D4D8;
-}
 
-.generate-btn {
-    color: #fff;
-    background-color: #10B981;
-    font-weight: 300;
-    border: none;
-    border-radius: 6px;
-    padding: 10px 15px;
-    font-family: "Inter", sans-serif;
-}
-
-.generate-btn:hover {
-    color: #1F2937;
-    font-weight: 400;
-    cursor: pointer;
-}
-
-.output-box {
-    display: inline-block;
-    justify-content: space-evenly;
-    background-color: #273549;
-    height: 40px;
-    width: 210px;
-    margin-right: 25px;
-    border: none;
-    border-radius: 6px;
-    color: #55F991;
-    font-family: "Inter", sans-serif;
-    padding: 5px 15px;
-    text-align: center;
-    align-content: center;
-    overflow: auto;
-}
-
-p {
-    font-family: 'Karla', sans-serif;
-    font-size: 0.75rem;
-    margin-left: 180px;
-    color: #4ADF86;
-    font-weight: 500;
-}
-
-.output-box:hover {
-    cursor: pointer;
-}
-
-.output-box:active {
-    cursor: pointer;
-    border: dotted 2px #55F991;
+    background-color: var(--accent-light);
+    color: var(--background);
 }
 
 .checkboxes label {
-    font-family: "Inter", sans-serif;
     font-weight: 200;
     font-size: 0.75rem;
-    color: #fff;
 }
 
 .checkboxes input {
@@ -144,4 +174,41 @@ p {
 
 .checkboxes input:hover {
     cursor: pointer;
+}
+
+/* Password Output */
+
+.output-box {
+    display: inline-block;
+    justify-content: space-evenly;
+    text-align: center;
+    align-content: center;
+    
+    background-color: var(--accent-dark);
+    height: 40px;
+    width: 210px;
+    margin-right: 25px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 6px;
+    
+    font-size: 0.75rem;
+    color: var(--spring-green);
+    overflow: auto;
+}
+
+.output-box:hover {
+    cursor: pointer;
+}
+
+.output-box:active {
+    cursor: pointer;
+    border: dotted 2px var(--spring-green);
+}
+
+p {
+    font-family: var(--heading-font);
+    font-size: 0.75rem;
+    margin-left: 180px;
+    color: var(--spring-green);
 }

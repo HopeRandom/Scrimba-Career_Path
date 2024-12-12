@@ -12,14 +12,10 @@ const lengthInput = document.getElementById('length-input');
 const numbersCheckbox = document.getElementById("numbers");
 const symbolCheckbox = document.getElementById("symbols");
 
-// console.log(numbersCheckbox.checked)
-
-// let checkedNumbers = numbersCheckbox.checked;
-// let checkedSymbols = symbolCheckbox.checked;
 
 generateBtn.addEventListener('click', () => {
 
-    passwordLength = lengthInput.value;
+    passwordLength = lengthInput.value
     passwordOne.textContent = generatePassword();
     passwordTwo.textContent = generatePassword();
 });
@@ -86,3 +82,10 @@ passwordTwo.addEventListener('click', async (e) => {
     await navigator.clipboard.writeText(content);
 });
 
+// Toggle dark/light mode switch 
+
+const themeSwitch = document.getElementById('theme-switch')
+
+themeSwitch.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode')
+})
