@@ -1,0 +1,68 @@
+html body { 
+    margin: 0;
+    background-color: #1B244A;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(CursedTimerUlil-Aznm.ttf);
+    font-family: ScoreBoard;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #EEEEEE;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-family: ScoreBoard;
+    font-size: 90px;
+    color: #F94F6D;
+}
+
+button {
+    margin: 0 5px;
+    background-color: #1B244A;
+    border: #9AABD8 solid 2px; 
+    border-radius: 5px;
+    height: 45px;
+    width: 45px;
+    font-family: ScoreBoard;
+    font-size: 18px;
+    color: #9AABD8;
+
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#home-score, #guest-score {
+    background-color: #080001;
+    height: 120px;
+    width: 155px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 138px;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
