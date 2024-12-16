@@ -47,14 +47,25 @@ button:hover {
     background-color: #080001;
     height: 120px;
     width: 155px;
-    border: none;
     border-radius: 5px;
     margin: 20px auto;
     text-align: center;
     line-height: 138px;
 }
 
+#reset {
+    background-color: #080001;
+    border: none;
+    padding: 15px 20px;
+    color: #F94F6D;
+    display: block;
+    margin: 15px auto;
+    width: fit-content;
+}
 
+#reset:hover {
+    border: #F94F6D solid 2px;
+}
 
 .container {
     display: flex;

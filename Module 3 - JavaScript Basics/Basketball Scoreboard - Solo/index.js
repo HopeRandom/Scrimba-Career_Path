@@ -1,5 +1,6 @@
 const homeScoreEl = document.getElementById("home-score")
 const guestScoreEl = document.getElementById("guest-score")
+const resetEl = document.getElementById("reset")
 let homeScore = 0
 let guestScore  = 0
 
@@ -33,3 +34,10 @@ function increaseGuestScoreThree() {
     guestScore += 3
     guestScoreEl.textContent = guestScore
 }
+
+resetEl.addEventListener('click', () => {
+    homeScore = 0
+    guestScore = 0
+    homeScoreEl.textContent = homeScore
+    guestScoreEl.textContent = guestScore
+})
