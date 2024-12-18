@@ -9,6 +9,12 @@ html body {
     font-family: ScoreBoard;
 }
 
+h2 {
+    font-family: ScoreBoard;
+    font-size: 90px;
+    color: #F94F6D;
+}
+
 h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -18,12 +24,6 @@ h3 {
     justify-content: center;
     width: 150px;
     margin-bottom: 0px;
-}
-
-h2 {
-    font-family: ScoreBoard;
-    font-size: 90px;
-    color: #F94F6D;
 }
 
 button {
@@ -36,11 +36,16 @@ button {
     font-family: ScoreBoard;
     font-size: 18px;
     color: #9AABD8;
-
+    
 }
 
 button:hover {
     cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
 }
 
 #home-score, #guest-score {
@@ -72,8 +77,6 @@ button:hover {
     justify-content: space-evenly;
 }
 
-.btn-container {
-    display: flex;
-    justify-content: center;
+.highlight {
+    border: #F94F6D 3px solid;
 }
-
