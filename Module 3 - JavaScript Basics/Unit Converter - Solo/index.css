@@ -1,0 +1,87 @@
+* *::after *::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "inter", sans-serif;
+    text-align: center;
+}
+
+header {
+    padding: 20px 0 10px 0;
+    background-color: #6943FF;
+    color: #FFF;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #CCC1FF;
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFF;
+}
+
+input {
+    background: none;
+    border: 2px solid #B295FF;
+    border-radius: 5px;
+    height: 85px;
+    width: 120px;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: #FFF;
+
+}
+
+input::placeholder {
+    color: #FFF;
+}
+
+button {
+    display: block;
+    margin: 25px auto;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #3D3D3D;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #CCC1FF;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #1F2937;
+
+}
+
+.measurement-section {
+    padding: 5px;
+    margin: 12px 25px;
+    width: 80%;
+    background-color: #273549;
+    border-top-left-radius: 5px;    
+    border-top-right-radius: 5px;
+}
